@@ -1,9 +1,13 @@
 .TH SIMPLE_SHELL 3 "April 2021" "0.3" "SIMPLE_SHELL MAN PAGE"
 .SH NAME
-.B simple_shell - Recreation of a simple UNIX command interpreter.
+.B simple_shell
 .SH SYNOPSIS
+.B #include <shell.h>
 
+hsh
+.B [OPTION] [FILE]
 .SH DESCRIPTION
+.B Shell is a simple UNIX interpreter that provides user interface to access and give orders to the operating system.
 
 .PP
 .B Some of the general requirements are:
@@ -55,9 +59,32 @@
     write (man 2 write)
 
 .SH OPTIONS
+.B Searches in the PATH, has built-ins commands and uses an environment to execute the commands.
 
+.B /bin/ls
+.RS
+lists content of the current directory.
+.RE
+.B /bin/ls-l
+.RS
+list content of the current directory in long format.
+.RE
+.B /bin/ls -la
+.RS
+list content of the current directory along with the hidden files.
+.RE
+.B /bin/pwd
+.RS
+prints the current working directory
+.RE
+.B exit
+.RS
+exit the shell
+.RE
 .SH EXAMPLES
-.PP
+.B $ pwd
+
+/home/vagrant/simple_shell
 
 .SH RETURN/EXIT VALUES
 
