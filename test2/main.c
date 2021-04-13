@@ -25,10 +25,10 @@ void _exec(char *name, char **buffer, char **buffercopy, char **tmp, int process
 		comm_line[i] = NULL;
 	comm_line[0] = strtok(*buffer, " \n\t");
 	for (i = 0; comm_line[i]; i++)
-		comm_line[i] = strtok(NULL, "\n\t");
+		comm_line[i] = strtok(NULL, " \n\t");
 
 	comm_line[i] = NULL;
-	*tmp = path(command_line[0]);
+	*tmp = path(comm_line[0]);
 	comm_line[0] = *tmp;
 	child = fork();
 	

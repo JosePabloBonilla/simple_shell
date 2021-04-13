@@ -25,3 +25,25 @@ int _atoi(char *str)
 
 	return (sign * i);
 }
+
+/**
+ * print_number - print int with putchar
+ * @n: int
+ */
+void print_number(int n)
+{
+	int tot;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		tot = -n;
+	}
+	else
+		tot = n;
+
+	if (tot / 10)
+		print_number(tot / 10);
+
+	_putchar(tot % 10 + '0');
+}
