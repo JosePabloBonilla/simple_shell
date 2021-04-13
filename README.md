@@ -20,4 +20,5 @@ echo "/bin/ls" | ./hsh
 ```
 ## Authors
 [Jose Pablo Bonilla](https://github.com/JosePabloBonilla)
+&
 [Xavier Figueroa](https://github.com/xefigueroa)
