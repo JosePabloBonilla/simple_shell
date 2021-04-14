@@ -8,14 +8,14 @@ void _perror(char *s)
 {
 	write(STDERR_FILENO, s, _strlen(s));
 }
-*
+
 /**
  * print_error - print error cases
  * @err0: error string
  * @err1: error string
  * @status: shell status
  */
-void print_error(*char *err0, char *err1, int status)
+void print_error(char *err0, char *err1, int status)
 {
 	if (status == 0)
 	{
@@ -36,7 +36,7 @@ void print_error(*char *err0, char *err1, int status)
 	}
 	else
 	{
-		write(STDERR_FILENO, wee0, _strlen(err0));
+		write(STDERR_FILENO, err0, _strlen(err0));
 		write(STDERR_FILENO, ": ", 2);
 		print_number(status);
 		write(STDERR_FILENO, ": ", 2);

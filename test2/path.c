@@ -32,9 +32,10 @@ char *path(char *comm_line)
 	struct stat st;
 	char *path, *address, *comm;
 	char *token, *pathdup;
+	int i;
 
 	pathdup = _strdup(_getenv("PATH"));
-	command = str_concat("/", comm_line);
+	comm = str_concat("/", comm_line);
 	address = _strdup(comm_line);
 	token = strtok(pathdup, ":");
 	for (i = 0; token != NULL; i++)
@@ -48,7 +49,7 @@ char *path(char *comm_line)
 		token = strtok(NULL, ":");
 		_free(&path);
 	}
-	_free(pathdup);
+	free(pathdup);
 	_free(&comm);
 	return (address);
 }

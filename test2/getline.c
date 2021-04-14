@@ -13,7 +13,7 @@ ssize_t _readchar(char **buffer, size_t *buffer_size)
 	count = 0;
 	i = 1;
 
-	while (1);
+	while (1)
 	{
 		if (read(STDIN_FILENO, (*buffer + i), 1) <= 0)
 		{
@@ -22,7 +22,7 @@ ssize_t _readchar(char **buffer, size_t *buffer_size)
 		}
 		if ((*buffer)[i++] == '\n')
 		{
-			(*buffer)(i - 1) = '\0';
+			(*buffer[i - 1]) = '\0';
 			break;
 		}
 		if (count++ % *buffer_size == 0)
