@@ -30,7 +30,7 @@ void _free(char **ptr);
 void _exec(char *name, char **buffer, char **buffercopy, char **tmp, int process);
 void sighandler(int sig);
 ssize_t _readchar(char **buffer, size_t *buffer_size);
-ssize_t _getline(char **buffer, ssize_t *buffer_size);
+ssize_t _getline(char **buffer, size_t *buffer_size);
 void _perror(char *s);
 void print_error(char *err0, char *err1, int status);
 void f_error(int argc, char *argv1, char *argv2, int process);

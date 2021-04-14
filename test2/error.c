@@ -46,7 +46,11 @@ void print_error(char *err0, char *err1, int status)
 }
 
 /**
- *
+ * f_error - function to process errors
+ * @argc: arg count
+ * @argv1: arg vector
+ * @argv2: arg vector
+ * @process: process
  */
 void f_error(int argc, char *argv1, char *argv2, int process)
 {

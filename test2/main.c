@@ -1,9 +1,11 @@
 #include "header.h"
 /**
  * sighandler - ignore CTRL + C
+ * @sig: void
  */
 void sighandler(int sig)
 {
+	(void)sig;
 	write(1, "\n$ ", 3);
 }
 

@@ -37,11 +37,11 @@ ssize_t _readchar(char **buffer, size_t *buffer_size)
  * @buffer_size: maximum size of char input
  * Return: number of chars
  */
-ssize_t _getline(char **buffer, ssize_t *buffer_size)
+ssize_t _getline(char **buffer, size_t *buffer_size)
 {
 	ssize_t count;
 
 	count = _readchar(buffer, buffer_size);
 
-	return(count);
+	return (count);
 }
