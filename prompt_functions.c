@@ -16,7 +16,10 @@ int prompt(void)
 		{
 			if (writecount == -1)
 			{
-				exit(0);
+				if (writecount == -1)
+				{
+					exit(0);
+				}
 			}
 		}
 	}
