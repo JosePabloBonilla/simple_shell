@@ -12,6 +12,10 @@ int prompt(void)
 	if (isatty(STDIN_FILENO) == 1)
 	{
 		writecount = write(STDOUT_FILENO, prompt, 2);
+		if (writecount == -1)
+		{
+			exit(0);
+		}
 	}
 	return (0);
 }
