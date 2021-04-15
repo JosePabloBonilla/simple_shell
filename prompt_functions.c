@@ -14,13 +14,7 @@ int prompt(void)
 		writecount = write(STDOUT_FILENO, prompt, 2);
 		if (writecount == -1)
 		{
-			if (writecount == -1)
-			{
-				if (writecount == -1)
-				{
-					exit(0);
-				}
-			}
+			exit(0);
 		}
 	}
 	return (0);
